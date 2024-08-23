@@ -12,7 +12,7 @@
 
 	<groupId>com.tinqinacademy.admin</groupId>
 	<artifactId>admin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${revision}</version>
 	<name>admin</name>
 
 
@@ -32,9 +32,10 @@
 	</scm>
 
 	<properties>
+		<revision>0.0.1-SNAPSHOT</revision>
 		<java.version>21</java.version>
-		<spring-boot-admin-starter-client>3.3.2</spring-boot-admin-starter-client>
 		<spring-boot-admin-starter-server>3.3.2</spring-boot-admin-starter-server>
+		<srping-dotenv.version>2.5.4</srping-dotenv.version>
 	</properties>
 
 	<dependencies>
@@ -44,18 +45,16 @@
 		</dependency>
 
 		<dependency>
+			<groupId>me.paulschwarz</groupId>
+			<artifactId>spring-dotenv</artifactId>
+			<version>${srping-dotenv.version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
-		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
-			<version>${spring-boot-admin-starter-client}</version>
-		</dependency>
-
 
 
 		<dependency>
